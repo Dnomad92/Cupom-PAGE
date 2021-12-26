@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cupom for Websites - by Me</title>
+	<link rel="stylesheet" href="Style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="cupom-card">
+			<img class="logo" src="TOCA.png" alt="logo">
+			<h3>20% de Desconto usando esse cupom, para assinantes dos nossos planos.</h3>
+
+			<div class="cupom-row">
+				<span id="cpnCode">MEUCUPOM20</span>
+				<span id="cpnBtn">COPIAR CODIGO</span>
+			</div>
+
+			<p>Valido ate: 30 Dez, 2021</p>
+
+			<div class="circle1"></div>
+			<div class="circle2"></div>		
+
+
+
+		</div>
+	</div>
+
+<script>
+	var cpnBtn = document.getElementById("cpnBtn");
+	var cpnCode = document.getElementById("cpnCode");
+
+	cpnBtn.onclick = function(){
+		navigator.clipboard.writeText(cpnCode.innerHTML);
+		cpnBtn.innerHTML = "COPIADO!";
+		setTimeout(function(){
+			cpnBtn.innerHTML = "GERAR CODIGO";
+			cpnCode.innerHTML = "XXXXXXXXXX"
+		},3000);
+	}
+</script>
+
+
+</body>
+</html>
